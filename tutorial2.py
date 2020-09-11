@@ -9,7 +9,7 @@ app = Flask(__name__)
 # content = name" allows the page to display the name.
 @app.route("/<name>")
 def home(name):
-    return render_template("index.html", content = name, r = 2)
+    return render_template("index.html", content = name, r = ["tim", "joe", "bill"])
 
 if __name__ == "__main__":
     app.run()
