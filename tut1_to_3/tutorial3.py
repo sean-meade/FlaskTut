@@ -10,7 +10,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html", content = "Testing")
+    return render_template("index.html")
+
+@app.route("/test")
+def test():
+    return render_template("new.html")
 
 if __name__ == "__main__":
     # debug=True means that the page will update automatically
